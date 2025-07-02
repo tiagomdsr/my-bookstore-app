@@ -6,17 +6,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 
 import { useUser } from "@/context/UserContext";
+import { loginSchema } from "@/constants/schemas";
 
 export type User = {
     name?: string;
     email: string;
     password?: string;
 }
-
-const loginSchema = z.object({
-	email: z.string().email("Email inválido"),
-	password: z.string().min(4, "Senha muito curta"),
-})
 
 type LoginData = z.infer<typeof loginSchema>
 
