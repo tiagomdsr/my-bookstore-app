@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { UserProvider } from "@/context/UserContext";
+import { UserProvider } from "@/context/useUser";
 
 export const metadata: Metadata = {
   title: "Livraria Moraes",
